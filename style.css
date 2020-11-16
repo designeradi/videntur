@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ccc;
+}
+
+.blur-bg{
+    background-image: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+
+#videntur{ color: #17A6E8; font-weight: 500;}
+#exec{ color: #e1e1eb;}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 100;
+}
+
+li,a{
+    text-decoration: none;
+}
+
+ @media only screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 5px;
+    }
+    li{ 
+        display: inline-block;
+        border-radius: 3px;
+    }
+    
+    li, a{
+        padding: 5px;
+        font-size: 3.5vw;
+    }
+
+    h1{
+        font-size: 4vw;
+        text-align: center;
+        margin-top: 3%;
+        line-height: 5vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    h1 > img{
+        height: 5vw;
+        clip-path: polygon(86% 0, 86% 100%, 13% 100%, 13% 0);
+    }
+
+    h1 > span{
+        line-height: 5vw;
+    }
+
+    nav{
+        margin-top: 4%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.3);
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.247);
+    }
+
+    .content{
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .welcome{
+        text-align: center;
+        align-items: center;
+        background-color: #17A6E8;
+        clip-path: polygon(0 0, 100% 0, 100% 42%, 50% 100%, 0 42%);
+    }
+
+    .welcome > span{
+        background-color: rgba(0,0,0,0);        
+        color: #3a465a;
+        font-size: 2px;
+        font-weight: 600;
+        text-shadow: 3px 4px 5px #04101673;
+    }
+
+    #about, #services, #contact{
+        margin: 10% 3% 0 3%;
+    }
+
+    .cards{
+        margin-top: 8%;
+        box-shadow: 0 4px 8px 0px rgba(0,0,0,.3);
+        transition: 0.3s;
+        border-radius: 5px 5px 0 0;
+        padding: 3%;
+        font-size: 3vw;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* .cards, .cards > *, .cards > * > *{
+        background-color:  #323e53;
+    } */
+
+    .cards:hover, .header:hover{
+        box-shadow: 0 8px 12px 0 rgba(0,0,0,.3);
+    }
+
+    .card-img, .card-text{
+        padding: 10px 15px;
+    }
+
+    .card-img > img{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.1);
+        border-radius: 5px;
+
+    }
+
+    h3, h2{
+        margin-bottom: 3%;
+
+    }
+     .header ,.content, .footer{
+        padding: 2%;
+    }
+
+    #about{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;        
+    }
+
+    #about > p, h2 {
+        width: 70%;
+        text-align: center;
+        line-height: 20px;
+    }
+
+    #about >*, #about{
+        padding: 2% 0;
+    }
+
+    .line{
+        display: block;
+        margin: 3% auto;
+        width: 30px;
+        border-top: 3px solid #17A6E8;
+    }
+
+    #contact{
+        margin-top: 0;
+    }
+
+    #map{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    iframe{
+        width: 87%;
+        height: 300px;
+    }
+
+    address{
+        margin: 5% auto;
+        padding: 10%;
+        background-color: rgba(83, 83, 83, 0.74);
+    }
+
+    #feedback{
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;     
+        align-content: center;   
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    form > *{
+        width: 100%;
+        margin: 2% auto;
+        box-sizing: border-box;
+        border: 2px solid #0f719e;
+        padding: 1%;
+        background-color: #1a212c8a;
+    }
+    input{
+        font-size: 18px;
+    }
+
+    input:focus, textarea:focus{
+        outline: none;
+        border: 2px solid #17A6E8;
+    }
+
+    input[type=submit]{
+        outline: none;
+        border: 2px solid #17a6e8;
+        color: #ccc;
+        font-size: large;
+        background-color: #0f719e;
+    }
+
+    .feedback > h2{
+        font-size: 50px;
+    }
+
+    textarea{
+        resize: none;
+    }
+
+    .footer{
+        padding: 2%;
+        box-shadow: 4px 4px 4px #000;
+        width: 100%;
+    }
+    
+    .footer>h3>img{
+        height: 17px;
+    }
+ }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    h1 > img{
+        height: 1.5vw;
+    }
+
+    h1{
+        font-size: 1.5vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 400;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: large;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10%;
+        width: 30%;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        padding: 2%;
+        background-color: #1112139d;
+    }
+
+    .content{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2%;
+    }
+
+    .content > {
+        margin-bottom: 3%;
+    }
+
+    .welcome{
+        width: 100%;
+        text-align: center;
+    }
+
+    #services{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards{
+        width: 35%;
+        padding: 2.5%;
+        margin: 2%;
+        border: 1px solid #dee;
+        border-radius: 8px;
+    }
+
+    .cards, .cards>*{
+        background-color: rgba(68, 67, 67, 0);
+    }
+
+    .card-img>img{
+        border-radius: 8px ;
+    }
+
+    .card-text> *{
+        margin-top: 6%;
+        color: #eee;
+    }
+
+    .card-text > h3{
+        font-size: 25px;
+        font-family: monospace;
+        color: #eee;
+    }
+
+    #about{
+        margin: 3% auto 0 auto;
+        width: 80%;
+    }
+
+    #contact{
+        margin-top: 5%;
+    }
+
+    #contact>*{
+      display: block;
+    }
+
+    #map{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    iframe{
+        width: 50%;
+        height: 300px;
+    }
+
+    address{
+        margin: auto;
+        width: auto;
+        padding: 8%;
+        height: 100%;
+        background-color: rgba(83, 83, 83, 0.74);
+    }
+
+    #feedback{
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;     
+        align-content: center;   
+        align-items: center;
+        justify-content: center;
+    }
+    
+ 
+    
+    form > *{
+        width: 100%;
+        margin: 2% auto;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        padding: 10px;
+        background-color: #00000017;
+        border-radius: 5px;
+    }
+    input{
+        font-size: 18px;
+        color: #fff;
+    }
+
+    input:focus, textarea:focus{
+        outline: none;
+        border: 1px solid #eee;
+        font-size: 20px;
+    }
+
+    input[type=submit]{
+        outline: none;
+        border: 2px solid #ddd;
+        color: #eee;
+        font-size: large;
+        background-color: #0000002f;
+    }
+    textarea{
+        resize: none;
+    }
+
+    #feedback{
+        width: 100%;
+        display: flex;
+    }
+    #feedback>h2{
+        text-align: center;
+        width: 60%;
+        color: #eee;
+        font-size: 30px;
+    }
+
+    .footer{
+        padding: 2%;
+    }
+    
+    .footer>h3>img{
+        height: 1.2vw;
+    }
+
+}
+
