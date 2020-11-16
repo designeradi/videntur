@@ -1,0 +1,19 @@
+{
+  "name": "videntur",
+  "version": "1.0.0",
+  "description": "Logo designed using Online Logo Maker\r https://onlinelogomaker.com",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designeradi/videntur.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/designeradi/videntur/issues"
+  },
+  "homepage": "https://github.com/designeradi/videntur#readme"
+}
